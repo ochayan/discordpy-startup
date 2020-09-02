@@ -1,6 +1,14 @@
 from discord.ext import commands
 import os
 import traceback
+import random
+
+if messae.content == "スロット":
+    slot_list = ['\U00002660', '\U00002663', '\U00002665', '\U00002666', ':seven:']
+    A = random.choice(slot_list)
+    B = random.choice(slot_list)
+    C = random.choice(slot_list)
+    await client.send_message(message.channel, "%s%s%s" % (A, B, C))
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -14,8 +22,8 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def ping(ctx):
-    await ctx.send('pong')
+async def シグ(ctx):
+    await ctx.send('シグシグ')
 
 
 bot.run(token)
